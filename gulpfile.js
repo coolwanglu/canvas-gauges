@@ -241,6 +241,7 @@ gulp.task('build:prod', done => {
 
             console.log(chalk.grey(cmd));
 
+            /*
             let dst = '../canvas-gauges-pages/download';
 
             fsc.rm(dst + '/' + version);
@@ -280,6 +281,7 @@ gulp.task('build:prod', done => {
 
             fs.writeFileSync('../canvas-gauges-pages/_data/releases.json',
                 JSON.stringify(info, null, 2));
+            */
 
             done();
         });
@@ -315,6 +317,7 @@ gulp.task('build:es5', ['clean'], done => {
         .pipe(gulp.dest('.'))
         .on('end', () => {
             if (!process.env.TRVIS) {
+                /*
                 fs.writeFileSync(
                     '../canvas-gauges-pages/' +
                     'assets/js/gauge.min.js',
@@ -325,6 +328,7 @@ gulp.task('build:es5', ['clean'], done => {
                     'assets/js/gauge.min.js.map',
                     fs.readFileSync('gauge.min.js.map')
                 );
+                */
             }
 
             done();
