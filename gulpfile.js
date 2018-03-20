@@ -241,20 +241,20 @@ gulp.task('build:prod', done => {
 
             console.log(chalk.grey(cmd));
 
-            /*
-            let dst = '../canvas-gauges-pages/download';
+            // let dst = '../canvas-gauges-pages/download';
 
-            fsc.rm(dst + '/' + version);
-            fsc.cp('dist', dst + '/' + version, true);
-            fsc.rm(dst + '/latest');
+            //fsc.rm(dst + '/' + version);
+            //fsc.cp('dist', dst + '/' + version, true);
+            //fsc.rm(dst + '/latest');
 
-            let releases = fsc.ls(dst);
-            let latest = semver.maxSatisfying(releases, '*');
+            // let releases = fsc.ls(dst);
+            // let latest = semver.maxSatisfying(releases, '*');
 
-            fsc.cp(dst + '/' + latest, dst + '/latest');
+            //fsc.cp(dst + '/' + latest, dst + '/latest');
 
             let info = {};
 
+          /*
             releases.forEach(release => {
                 info[release] = {
                     name: release
@@ -317,7 +317,7 @@ gulp.task('build:es5', ['clean'], done => {
         .pipe(gulp.dest('.'))
         .on('end', () => {
             if (!process.env.TRVIS) {
-                /*
+              /*
                 fs.writeFileSync(
                     '../canvas-gauges-pages/' +
                     'assets/js/gauge.min.js',
